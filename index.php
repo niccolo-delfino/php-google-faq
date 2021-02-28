@@ -75,20 +75,67 @@ $faq =
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+   <link rel="stylesheet" href="css/style.css">
    <title>Document</title>
  </head>
  <body>
+   <nav>
+     <div class="nav-top">
+       <div class="top-left">
+         <div class="logo">
+           <img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c51f.png" alt="Logo">
+         </div>
+         <h3><a href="#">Privacy e Termini</a></h3>
+       </div>
+       <div class="top-right">
+         <i class="fas fa-ellipsis-v"></i>
+         <i class="fas fa-ellipsis-v"></i>
+       </div>
+     </div>
+     <div class="nav-bottom">
+       <ul>
+         <li><a href="#">Introduzione</a></li>
+         <li><a href="#">Norme sulla Privacy</a></li>
+         <li><a href="#">Termini di servizio</a></li>
+         <li><a href="#">Tecnologie</a></li>
+         <li><a href="#">Domande frequenti</a></li>
+       </ul>
+     </div>
+     <hr>
+   </nav>
 
    <main>
      <div class="container">
-             <?php foreach ($faq as $obj) { ?>
-                 <h2><?php echo $obj['question']?></h2>
-                 <?php foreach ($obj['answers'] as $answer) { ?>
-                     <div class=""><?php echo $answer ?></div>
-                 <?php }?>
-             <?php }?>
-         </div>
-     </main>
+       <?php foreach ($faq as $obj) { ?>
+         <h2><?php echo $obj['question']?></h2>
+          <?php foreach ($obj['answers'] as $answer) { ?>
+           <div><?php echo $answer ?></div>
+         <?php }?>
+       <?php }?>
+      </div>
+   </main>
+
+    <footer>
+     <div class="container">
+       <ul>
+        <li><a href="#">Google</a></li>
+        <li><a href="#">Tutto su Google</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Termini</a></li>
+      </ul>
+      <div class="selection">
+        <select name="lang">
+          <option value="Italiano">Italiano</option>
+          <option value="Deutsch">Deutsch</option>
+          <option value="English">English</option>
+        </select>
+      </div>
+     </div>
+
+   </footer>
 
  </body>
  </html>
